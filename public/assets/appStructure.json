@@ -1,0 +1,7 @@
+{
+    "pages":[
+        { "text": "Home","icon":"", "path":"/", "component":"HomePage" },
+        { "text": "Map","icon":"map.svg", "path":"/map", "component":"MapPage" },
+        { "text": "Search","icon":"search.svg", "path":"/search", "component":"SearchPage" }
+    ]
+}

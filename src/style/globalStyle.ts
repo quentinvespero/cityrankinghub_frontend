@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { colors } from "./variables"
 
 const GlobalStyle = createGlobalStyle `
 /* font import */
@@ -6,12 +7,10 @@ const GlobalStyle = createGlobalStyle `
 
 :root{
     font-family: "Titillium Web", Arial;
+    background:${colors.color4};
 }
 html{
     background-color: var(--color1);
-    /* font-family: "Rubik"; */
-    /* font-family: "Titillium Web", Arial; */
-    /* font-family: "Archivo Narrow"; */
 }
 body{
     margin: 0;
