@@ -4,8 +4,6 @@ const HomePage = () => {
     return (
         <div>
             <UpDownVote/>
-            <UpDownVote/>
-            <UpDownVote/>
         </div>
     )
 }

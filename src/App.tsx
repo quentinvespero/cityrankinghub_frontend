@@ -6,6 +6,7 @@ import AppRouter from "./components/AppRouter"
 const Style = styled.div`
     display:flex;
     background:${colors.color1};
+    flex-direction:column;
 `
 
 const App = () => {
