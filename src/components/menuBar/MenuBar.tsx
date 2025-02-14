@@ -3,6 +3,7 @@ import { AppStructureContext } from "../context/AppStructureContext"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { colors } from "../../style/variables"
+import IconText from "../IconText"
 
 const Style = styled.div`
     display:flex;
@@ -21,7 +22,7 @@ const MenuBar = () => {
         <Style>
             {appStructure.pages.map((page)=>(
                 <Link key={page.path} to={page.path}>
-                    {page.text}
+                    <IconText text={page.text} icon={page.icon} iconSize={'1rem'} />
                 </Link>
             ))}
         </Style>

@@ -2,23 +2,23 @@ import { FC } from "react"
 
 export interface IconTextProps {
     text?: string
-    imageName?: string
-    className?:string
-    description?:string
-    style?:React.CSSProperties
-    iconSize?:string
+    icon?: string
+    className?: string
+    description?: string
+    style?: React.CSSProperties
+    iconSize?: string
 }
 
 ////////////////////////////////////////////
 // Guide Props
 ////////////////////////////////////////////
-// imageName : give full name of file. Exemple : image1.png
+// icon : give full name of file. Exemple : image1.png
 // text : 
 // description : if given, will show up a span element containing the description text
 // className : can give the name of the component in which it is, so it will be named as such "iconText-componentName"
 // iconSize : width of the image
 
-const IconText:FC<IconTextProps> = ({imageName, text, description, className, style, iconSize }) => {
+const IconText: FC<IconTextProps> = ({ icon, text, description, className, style, iconSize }) => {
 
     // path of the assets
     const assetPath = './assets/'
@@ -30,8 +30,8 @@ const IconText:FC<IconTextProps> = ({imageName, text, description, className, st
     const pathToApply = () => {
         let path = assetPath
 
-        if (imageName) {
-            if (imageName.includes('svg')) path += 'icons/'
+        if (icon) {
+            if (icon.includes('svg')) path += 'icons/'
             else path += 'imgs/'
         }
 
@@ -39,23 +39,23 @@ const IconText:FC<IconTextProps> = ({imageName, text, description, className, st
     }
 
     const styleToApply = {
-        parent:{
-            display:'flex'
+        parent: {
+            display: 'flex'
         },
-        image:{
+        image: {
             width: iconSize ? iconSize : '1rem',
             height: iconSize ? iconSize : '1rem'
         },
-        text:{
-            
+        text: {
+
         }
     }
-    
-    // console.log('-------textIcon',imageName,text, descriptionText)
-    
+
+    // console.log('-------textIcon',icon,text, descriptionText)
+
     return (
-        <div className={`iconText ${className}`} style={{...style,...styleToApply}} >
-            {imageName && <img style={styleToApply.image} src={`${pathToApply()}${imageName}`} alt={descriptionText}/>}
+        <div className={`iconText ${className}`} style={{ ...style, ...styleToApply }} >
+            {icon && <img style={styleToApply.image} src={`${pathToApply()}${icon}`} alt={descriptionText} />}
             {text && <p>{text}</p>}
             {description && <span>{description}</span>}
         </div>
