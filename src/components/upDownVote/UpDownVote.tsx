@@ -11,11 +11,12 @@ const Style = styled.div`
     align-items:center;
     column-gap:.4rem;
     box-shadow:0 0 .5rem ${colors.color4};
+    justify-self:center;
 `
 
 const UpDownVote = () => {
     return (
-        <Style>
+        <Style className="upDownVote">
             <UpDownVoteButton typeOfVote="up"/>
             <UpDownVoteCounter/>
             <UpDownVoteButton typeOfVote="down"/>

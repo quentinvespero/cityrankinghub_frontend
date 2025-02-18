@@ -2,7 +2,7 @@ import UpDownVote from "../upDownVote/UpDownVote"
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="homePage">
             <UpDownVote/>
         </div>
     )
